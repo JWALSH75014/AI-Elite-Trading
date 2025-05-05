@@ -1,19 +1,8 @@
 
-import Navbar from '../components/Navbar';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React from 'react';
 
-export default function Admin() {
-  return (
-    <div>
-      <Navbar />
-      <Container>
-        <Typography variant="h4" gutterBottom>Admin Dashboard</Typography>
-        <Button variant="outlined">Manage Users</Button>
-        <Button variant="outlined">Manage Signals</Button>
-        <Button variant="outlined">Manage Blog Posts</Button>
-      </Container>
-    </div>
-  );
+function Admin() {
+  return <h2>Admin Panel</h2>;
 }
+
+export default Admin;

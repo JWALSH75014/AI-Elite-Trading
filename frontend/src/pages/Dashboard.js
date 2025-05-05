@@ -1,16 +1,8 @@
 
-import Navbar from '../components/Navbar';
-import SignalCard from '../components/SignalCard';
-import Container from '@mui/material/Container';
+import React from 'react';
 
-export default function Dashboard() {
-  return (
-    <div>
-      <Navbar />
-      <Container>
-        <h1>Dashboard</h1>
-        <SignalCard />
-      </Container>
-    </div>
-  );
+function Dashboard() {
+  return <h2>Dashboard</h2>;
 }
+
+export default Dashboard;

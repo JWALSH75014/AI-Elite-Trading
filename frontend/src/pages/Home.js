@@ -1,17 +1,8 @@
 
-import Navbar from '../components/Navbar';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import React from 'react';
 
-export default function Home() {
-  return (
-    <div>
-      <Navbar />
-      <Container>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Welcome to AI Elite Trading
-        </Typography>
-      </Container>
-    </div>
-  );
+function Home() {
+  return <h1>Welcome to AI Elite Trading</h1>;
 }
+
+export default Home;
