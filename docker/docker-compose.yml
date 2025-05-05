@@ -1,0 +1,34 @@
+
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ai_elite_trading
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ../backend
+    restart: always
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/ai_elite_trading
+      MAILGUN_API_KEY: your-mailgun-key
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  frontend:
+    build: ../frontend
+    restart: always
+    ports:
+      - "5000:5000"
+
+volumes:
+  db_data:
